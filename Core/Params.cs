@@ -37,18 +37,24 @@ namespace Core
 
 		// Aerodynamic coefficients
 		public double C_z_beta { get; init; } = -1.0715;
-		public double C_z_delta_n { get; init; } = -0.1759;
+		public double C_z_delta_n { get; init; } = -0.183;
 
 		// Control law params general
 		public double k_gamma { get; init; } = 2;
 		public double k_omega_x { get; init; } = 1.5;
 		public double k_omega_y { get; init; } = 2.5;
-
-		// Control law params 1
-		public double k_gamma_set { get; init; } = 0.7;
-
-		// Control law params 3
-		public double k_z { get; init; } = 0.02;
-		public double k_zDot { get; init; } = 0.7;
+		public double kdot_omega_y { get; init; } = 2.0;
+		public double k3 { get; init; } = 1.3;
+		public double k6 { get; init; } = 1.3;
+		public double k10 { get; init; } = 8.0;
+		public double k15 { get; init; } = 1.0;
+		public double k5 { get; set; } = 0.0;
+		public double k17 { get; set; } = 0.0;
+		public double T_omega_x { get; init; } = 1.6;
+		public double T_omega_y { get; init; } = 2.5;
+		public double T5 { get; init; } = 2.3;
+		public double T15 { get; init; } = 0.85;
+		public double T17 { get; init; } = 2.3;
+		public double Skn { get; init; } = 167;
 	}
 }
